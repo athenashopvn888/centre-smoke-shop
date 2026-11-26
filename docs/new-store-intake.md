@@ -16,7 +16,7 @@
 ## Systems
 
 - GitHub repository and default branch: `athenashopvn888/centre-smoke-shop`, `main` — CONFIRMED.
-- Vercel team/project: Athena fleet team; `centre-smoke-shop` target — CONFIRMED after duplicate search, deployment receipt pending.
+- Vercel team/project: Athena fleet team; `centre-smoke-shop` (`prj_wdvun8iOrgYfxjVLgAIseJcYOUZQ`) — CONFIRMED and deployed.
 - Canonical domain: `https://centresmokeshop.com` — CONFIRMED by owner-supplied storefront artwork.
 - Redirect domains: `https://www.centresmokeshop.com` — CONDITIONAL; DNS currently uses a parking service.
 - DNS registrar/access: Namecheap DNS observed; write access not yet proven.
@@ -50,13 +50,13 @@
 - [ ] SOD delivery workflow — HELD by missing POD/configuration.
 - [ ] Master Lines and provider routing — HELD.
 - [x] Metadata, schema safety, robots, sitemap and canonicals prepared as a noindex preview.
-- [ ] Canonical/redirect DNS, TLS and production — pending release.
+- [ ] Canonical/redirect DNS and TLS — HELD by Namecheap login; Vercel production and both domain assignments are complete.
 - [ ] Anonymous desktop and 390x844 production read-back — pending release.
 - [ ] Command Center StoreCode/POD receipt — HELD.
 
 ## Final state
 
-- State: `PROPOSED` until checks, PR and preview deployment complete.
+- State: `DEPLOYED`; stable Vercel production verified, custom-domain DNS/TLS held.
 - Required holds: full NAP; public hours; StoreCode/menu authority; POD/delivery; voice/messaging routing.
 - Conditional holds: analytics/GSC and canonical DNS.
 - Owner next action: supply only the held business/system facts needed for their dependent surfaces.
