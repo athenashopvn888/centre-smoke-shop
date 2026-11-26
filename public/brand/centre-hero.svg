@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Green and white Centre Smoke Vape Shop brand illustration">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1080" y2="830"><stop stop-color="#f9fff6"/><stop offset="1" stop-color="#dfeeda"/></linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A8DB17"/><stop offset=".55" stop-color="#09620F"/><stop offset="1" stop-color="#01360A"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#062b0b" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="900" rx="80" fill="url(#bg)"/>
+  <path d="M0 720c230-140 380 100 620-20s360-20 580-100v300H0Z" fill="url(#wave)"/>
+  <path d="M0 790c260-110 430 110 710-10 190-80 310-60 490-140v260H0Z" fill="#fff" opacity=".78"/>
+  <g filter="url(#shadow)">
+    <rect x="155" y="135" width="890" height="540" rx="58" fill="#fff"/>
+    <circle cx="600" cy="330" r="124" fill="none" stroke="url(#wave)" stroke-width="30" stroke-dasharray="640 150" transform="rotate(-34 600 330)"/>
+    <path d="M662 280c-20-24-43-34-70-34-48 0-84 36-84 84s36 84 84 84c30 0 54-12 73-36" fill="none" stroke="#090B0A" stroke-width="36" stroke-linecap="round"/>
+    <path d="M335 505h530" stroke="#09620F" stroke-width="9" stroke-linecap="round"/>
+    <text x="600" y="574" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="900" fill="#090B0A" letter-spacing="3">CENTRE SMOKE</text>
+    <text x="600" y="630" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="#09620F" letter-spacing="6">VAPE SHOP</text>
+  </g>
+  <g fill="#09620F" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="24" text-anchor="middle">
+    <circle cx="210" cy="760" r="58" fill="#fff"/><text x="210" y="768">VAPE</text>
+    <circle cx="390" cy="800" r="58" fill="#fff"/><text x="390" y="808">SMOKE</text>
+    <circle cx="810" cy="790" r="58" fill="#fff"/><text x="810" y="798">PAPERS</text>
+    <circle cx="990" cy="735" r="58" fill="#fff"/><text x="990" y="743">GEAR</text>
+  </g>
+</svg>

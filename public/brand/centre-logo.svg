@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-label="Centre Smoke Vape Shop">
+  <rect width="720" height="180" rx="28" fill="#fff"/>
+  <g transform="translate(20 22) scale(1.06)">
+    <circle cx="64" cy="64" r="48" fill="none" stroke="#09620F" stroke-width="12" stroke-dasharray="250 60" transform="rotate(-34 64 64)"/>
+    <path d="M88 45C81 37 73 33 63 33c-18 0-31 13-31 31s13 31 31 31c11 0 20-4 27-13" fill="none" stroke="#090B0A" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <text x="176" y="78" font-family="Arial, Helvetica, sans-serif" font-size="57" font-weight="900" letter-spacing="2" fill="#090B0A">CENTRE</text>
+  <text x="176" y="132" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="900" letter-spacing="1" fill="#090B0A">SMOKE VAPE <tspan fill="#09620F">SHOP</tspan></text>
+</svg>
