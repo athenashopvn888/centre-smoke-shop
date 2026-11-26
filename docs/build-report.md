@@ -1,5 +1,11 @@
 # Build report
 
+## Scheduled cigarette visibility
+
+Centre Smoke uses the existing fleet Website Sync decision, scoped to the cigarette control key `CSS01`. Its `CIG_CONTROL` row inherits the shared Toronto schedule while `CigOn` is blank. The control key is specific to this integration and does not identify a live inventory source.
+
+The server-only `CIG_CONTROL_URL` setting connects Preview and Production to the same control feed. Missing or invalid decisions hide the controlled category and rows. The menu API, product and category routes, navigation, and TV2 apply the same decision. The usual fleet exceptions such as Backwoods remain accessible. Active screens refresh when the visibility changes.
+
 ## Temporary reference menu update
 
 On 2026-11-26 the owner authorized use of the named reference storefront’s public stock list, categories, flower tiers and pricing for the temporary Centre Smoke menu. The returned stock timestamp was 2026-10-29 02:25:07 UTC. The import includes 110 products across nine categories and five flower tiers, including all listed regular and sale prices, with no reference-store identity or location fields. The menu and product pages identify the date and direct customers to confirm local stock and prices by phone; the API identifies the same data as a reference snapshot.
