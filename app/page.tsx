@@ -46,8 +46,11 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading">
             <div><p className="eyebrow">Start here</p><h2>Shop by category</h2></div>
-            <p>Browse useful category information now. Current products and prices will appear only after a store-specific inventory source is approved.</p>
+            <p>Browse reference products by category, compare pack prices and explore all five flower tiers.</p>
           </div>
+          <Link className="home-menu-art" href="/menu" aria-label="Open the full menu">
+            <Image src="/brand/category-banner.webp" alt="" width={1536} height={512} sizes="100vw" />
+          </Link>
           <CategoryGrid />
         </div>
       </section>
@@ -62,7 +65,7 @@ export default function Home() {
           </div>
           <div className="feature-list">
             <article><span>01</span><div><h3>Clear categories</h3><p>Smoke, vape and accessory sections stay easy to scan on any screen.</p></div></article>
-            <article><span>02</span><div><h3>No made-up stock</h3><p>The menu stays closed until the correct store feed is connected and verified.</p></div></article>
+            <article><span>02</span><div><h3>Pack prices</h3><p>Compare listed weights and reference prices before calling to confirm availability.</p></div></article>
             <article><span>03</span><div><h3>Direct contact</h3><p>Call the number printed on the storefront artwork before making the trip.</p></div></article>
           </div>
         </div>

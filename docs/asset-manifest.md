@@ -11,3 +11,7 @@ The new repository had no prior asset manifest or build report. This manifest re
 | `/opengraph-image` | Social preview | 1200×630 | Centre Smoke Vape Shop | Generated brand card with name, domain and confirmed street address | Complete; app-generated |
 | `/icon` | Favicon/app icon | 32×32 | Centre Smoke Vape Shop | Generated C mark | Complete; app-generated |
 | `/apple-icon` | Apple touch icon | 180×180 | Centre Smoke Vape Shop | Generated C mark | Complete; app-generated |
+| `public/brand/menu-banner.webp` | Menu hero | 1536×512 | Decorative | Forest-green and black vinyl waves, lime edges and negative space for white copy | Complete; generated with built-in ImageGen |
+| `public/brand/category-banner.webp` | Home, category and tier banners | 1536×512 | Decorative | White vinyl with forest and lime wave ribbons, clear left area for dark copy | Complete; generated with built-in ImageGen |
+| `public/brand/centre-menu-decal.svg` | Menu banner | scalable | Decorative | Round Centre C vinyl badge inspired by storefront artwork | Complete; site vector |
+| `public/brand/centre-tier-decal.svg` | Tier links | scalable | Decorative | Green layered-tier vinyl badge | Complete; site vector |

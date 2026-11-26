@@ -17,12 +17,17 @@ test("required route family exists", async () => {
   for (const route of routes) await access(path.join(root, route));
 });
 
-test("menu fails closed without an approved source", async () => {
+test("temporary menu exposes a reference snapshot without claiming live availability", async () => {
   const source = await readFile(path.join(root, "app", "api", "menu", "route.ts"), "utf8");
-  assert.match(source, /state: "unconfigured"/);
-  assert.match(source, /products: \[\]/);
-  assert.match(source, /status: 503/);
+  const snapshot = JSON.parse(await readFile(path.join(root, "data", "menu-snapshot.json"), "utf8"));
+  assert.match(source, /state: "reference", storeCode: null, liveAvailability: false/);
   assert.doesNotMatch(source, /process\.env/);
+  assert.equal(new Set(snapshot.products.map(({ slug }) => slug)).size, snapshot.products.length);
+  assert.equal(new Set(snapshot.products.map(({ category }) => category)).size, 9);
+  assert.deepEqual([...new Set(snapshot.products.filter(({ category }) => category === "flower").map(({ tier }) => tier))].sort(), ["AA", "AAA+", "BUDGET", "EXOTIC", "PREMIUM"]);
+  for (const { prices } of snapshot.products) {
+    for (const { amount, regular, sale } of prices) assert.equal(amount, sale ?? regular);
+  }
 });
 
 test("preview indexing is disabled", async () => {

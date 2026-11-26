@@ -1,18 +1,12 @@
 import Link from "next/link";
-import { CATEGORIES } from "@/lib/content";
+import { CATEGORIES } from "@/lib/catalog";
 
 export function CategoryGrid() {
   return (
-    <div className="category-grid">
+    <nav className="catalog-chips" aria-label="Shop categories">
       {CATEGORIES.map((category) => (
-        <Link className="category-card" href={category.href} key={category.name}>
-          <span className="category-mark" aria-hidden="true">{category.mark}</span>
-          <span className="eyebrow">{category.eyebrow}</span>
-          <h3>{category.name}</h3>
-          <p>{category.text}</p>
-          <span className="text-link">Explore category <span aria-hidden="true">→</span></span>
-        </Link>
+        <Link href={`/menu/${category.slug}`} key={category.slug}>{category.name} <span aria-hidden="true"> →</span></Link>
       ))}
-    </div>
+    </nav>
   );
 }

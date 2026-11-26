@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
+import { snapshot } from "@/lib/menu-snapshot";
 
 export async function GET() {
   return NextResponse.json(
-    { state: "unconfigured", storeCode: null, source: null, products: [], message: "An approved store-specific inventory source is not connected." },
-    { status: 503, headers: { "Cache-Control": "no-store" } }
+    { state: "reference", storeCode: null, liveAvailability: false, ...snapshot },
+    { headers: { "Cache-Control": "no-store" } }
   );
 }

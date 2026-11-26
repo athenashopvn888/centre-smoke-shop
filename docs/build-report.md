@@ -1,5 +1,15 @@
 # Build report
 
+## Temporary reference menu update
+
+On 2026-11-26 the owner authorized use of the named reference storefront’s public stock list, categories, flower tiers and pricing for the temporary Centre Smoke menu. The returned stock timestamp was 2026-10-29 02:25:07 UTC. The import includes 110 products across nine categories and five flower tiers, including all listed regular and sale prices, with no reference-store identity or location fields. The menu and product pages identify the date and direct customers to confirm local stock and prices by phone; the API identifies the same data as a reference snapshot.
+
+The storefront includes search, category and flower tier navigation, product details, and pack pricing. Exotic, Premium and AAA+ use the source's 3g and 6g pricing rules. AA preserves true 5g and 14g weights. Budget preserves each product’s listed weights. The temporary reference does not feed the delivery or live inventory lane.
+
+Local verification: lint, typing, six tests, production build, production-dependency audit, 126 catalog and homepage HTTP checks, direct product and pricing parity across all 110 rows, and desktop/390px browser checks passed.
+
+The original build below records the starting release before this update.
+
 ## Scope
 
 - New Athena-owned repository created after confirming no existing Centre Smoke repository or Vercel project.
