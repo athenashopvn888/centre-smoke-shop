@@ -10,7 +10,7 @@ const NAV = [
   ["Visit", "/visit"]
 ] as const;
 
-export function Header() {
+export function Header({ showCigarettes }: { showCigarettes: boolean }) {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
@@ -19,7 +19,8 @@ export function Header() {
         <div className="shell header-inner">
           <Logo />
           <nav aria-label="Primary navigation">
-            {NAV.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
+            {NAV.filter(([, href]) => showCigarettes || href !== "/cigarettes").map(([label, href]) =>
+              <Link key={href} href={href} prefetch={false}>{label}</Link>)}
           </nav>
           <a className="button button--small button--primary header-call" href={SITE.tel}>Call shop</a>
         </div>

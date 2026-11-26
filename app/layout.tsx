@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { AgeGate } from "@/components/AgeGate";
 import { Footer, Header } from "@/components/SiteChrome";
 import { SITE } from "@/lib/site";
+import { getCigaretteDecision } from "@/lib/cigarette-control";
+import { ContentStatusRefresh } from "@/components/ContentStatusRefresh";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,13 +16,16 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#09620F" };
+export const dynamic = "force-dynamic";
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const { webOn, tvOn } = await getCigaretteDecision();
   return (
     <html lang="en">
       <body>
         <AgeGate />
-        <Header />
+        <Header showCigarettes={webOn} />
+        <ContentStatusRefresh webOn={webOn} tvOn={tvOn} />
         {children}
         <Footer />
       </body>

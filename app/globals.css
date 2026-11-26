@@ -226,3 +226,7 @@ p { color: var(--muted); }
   .catalog-banner--light::after { background: #ffffffba; }
 }
 @media (max-width: 420px) { .catalog-grid { grid-template-columns: 1fr; } }
+
+.tv-catalog h1 { font-size: clamp(2.6rem, 7vw, 7rem); }
+.tv-catalog ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr)); gap: 10px 24px; padding: 0; list-style: none; text-align: left; }
+.tv-catalog li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 7px 0; border-bottom: 1px solid #ffffff55; font-weight: 700; }

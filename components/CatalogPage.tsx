@@ -2,15 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Catalog } from "@/components/Catalog";
 import { CATEGORIES, TIERS } from "@/lib/catalog";
-import { snapshot, sourceDate } from "@/lib/menu-snapshot";
+import { sourceDate, visibleProducts } from "@/lib/menu-snapshot";
+import { getCigaretteDecision } from "@/lib/cigarette-control";
 import { SITE } from "@/lib/site";
 
 export function CatalogNotice() {
   return <p className="catalog-notice"><strong>Reference menu · {sourceDate}</strong><span>Listed prices are in CAD. Call <a href={SITE.tel}>{SITE.phone}</a> to confirm current stock and prices at Centre Smoke.</span></p>;
 }
 
-export function CatalogPage({ title, category, tier }: { title: string; category?: string; tier?: string }) {
-  const products = snapshot.products.filter((item) => (!category || item.category === category) && (!tier || item.tier === tier));
+export async function CatalogPage({ title, category, tier }: { title: string; category?: string; tier?: string }) {
+  const { webOn } = await getCigaretteDecision();
+  const products = visibleProducts(webOn).filter((item) => (!category || item.category === category) && (!tier || item.tier === tier));
   const menu = !category && !tier;
   return (
     <main id="main" className="shell catalog-shell">
@@ -27,7 +29,8 @@ export function CatalogPage({ title, category, tier }: { title: string; category
       <CatalogNotice />
       <nav className="catalog-chips" aria-label="Menu categories">
         <Link href="/menu" aria-current={menu ? "page" : undefined}>All products</Link>
-        {CATEGORIES.map((row) => <Link key={row.slug} href={`/menu/${row.slug}`} aria-current={category === row.slug && !tier ? "page" : undefined}>{row.name}</Link>)}
+        {CATEGORIES.filter(({ slug }) => webOn || slug !== "cigarettes").map((row) =>
+          <Link key={row.slug} href={`/menu/${row.slug}`} prefetch={false} aria-current={category === row.slug && !tier ? "page" : undefined}>{row.name}</Link>)}
       </nav>
       <nav className="catalog-tiers" aria-label="Flower tiers">
         <Image src="/brand/centre-tier-decal.svg" alt="" width={70} height={70} />
