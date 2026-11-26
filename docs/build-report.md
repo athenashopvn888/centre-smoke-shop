@@ -42,4 +42,4 @@
 
 ## State
 
-`PR_READY` after commit and PR creation; production release still pending.
+`DEPLOYED`. Source is merged and production is verified on the stable Vercel host. Canonical-domain DNS/TLS remains held by the existing Namecheap parking records and a fresh registrar login.
